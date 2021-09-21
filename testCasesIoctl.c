@@ -20,7 +20,7 @@ int main()
 	
 	fd = open( "/dev/my_Ioctl_driver", O_RDWR );
 	
-	fd = open( "/dev/my_ioctl_drive", O_RDWR );
+	fd = open( "/dev/my_ioctl_drive", O_RDWR );// wrong address
 	
 	if( fd < 0 ) {
 		printf("\n\nDevice could not be opened\n\n");
