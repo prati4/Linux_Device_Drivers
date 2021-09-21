@@ -29,13 +29,13 @@ int my_thread_fun(void *p)
 	while(!kthread_should_stop())
 	{
 		/*
-	  //    Atomically add one to v
+	  //  Atomically add one to v
        	atomic_inc(&my_global_variable); // single operation ; no much overhead 
-		printk(KERN_INFO "my_thread_fun1 after inc  %lu\n", atomic_read(&my_global_variable)); //1
+			printk(KERN_INFO "my_thread_fun1 after inc  %lu\n", atomic_read(&my_global_variable)); //1
 		
-	//	This function atomically reads the value of the given atomic variable
+	  // This function atomically reads the value of the given atomic variable
 			
-	      atomic_read(&my_global_variable);
+	   atomic_read(&my_global_variable);
 		atomic_add(14, &my_global_variable);
 		printk(KERN_INFO "my_thread_fun after add   %lu\n", atomic_read(&my_global_variable));//15
 
